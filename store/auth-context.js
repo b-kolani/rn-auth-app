@@ -83,7 +83,7 @@ function AuthContextProvider({ children }) {
 
     // Clean up the interval when the component unmounts or the user disconnects manually
     return () => clearInterval(tokenExpirationCheckInterval);
-  }, []);
+  }, [AsyncStorage]);
 
   /**Now, therefore here we might wanna store that 
   token on the device and not just in memory so that 
